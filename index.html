@@ -8,13 +8,13 @@
     <style>
         :root { --primary: #FFD700; --bg: #0f1113; --card-bg: #1c1f22; --text: #e0e0e0; --border: #343a40; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .container { max-width: 850px; margin: auto; background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .header { text-align: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; }
         h1 { color: var(--primary); text-transform: uppercase; margin: 0; font-size: 22px; }
         .section-header { color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8em; margin: 25px 0 10px; border-left: 3px solid var(--primary); padding-left: 10px; background: rgba(255, 215, 0, 0.05); padding: 5px 10px; }
         label { display: block; margin-bottom: 8px; font-size: 0.9em; color: #bbb; font-weight: 600; }
         input, textarea { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: #121416; color: #fff; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
-        textarea { height: 80px; resize: vertical; }
+        textarea { height: 70px; resize: vertical; }
         button { width: 100%; padding: 18px; background: var(--primary); color: #000; border: none; border-radius: 6px; font-weight: 800; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
         button:hover { background: #e6c200; transform: translateY(-2px); }
         #adm-panel { display: none; text-align: center; padding: 40px 0; }
@@ -27,50 +27,70 @@
     <div id="view-candidato">
         <div class="header">
             <h1>Teste de Superior • PMMG</h1>
-            <p>Recrutamento via Vercel (Seguro)</p>
+            <p>Formulário Oficial - Comando Geral</p>
         </div>
 
         <form action="https://formspree.io/f/mlgnanbe" method="POST">
             
-            <div class="section-header">Informações Básicas</div>
-            <label>1. Idade:</label> <input type="number" name="Idade" required>
-            <label>2. Nick no servidor e Id:</label> <input type="text" name="Nick_ID" required>
-            <label>3. Tempo total jogando MTA:</label> <input type="text" name="Tempo_MTA" required>
-            <label>4. Tempo jogando no Distrito?</label> <input type="text" name="Tempo_Distrito" required>
-            <label>5. Horários disponíveis:</label> <textarea name="Horarios" required></textarea>
+            <div class="section-header">Identificação Básica</div>
+            <label>1. Idade:</label> <input type="number" name="1_Idade" required>
+            <label>2. Nick no servidor e Id:</label> <input type="text" name="2_Nick_ID" required>
+            <label>3. Tempo total jogando MTA:</label> <input type="text" name="3_Tempo_MTA" required>
+            <label>4. Tempo jogando no Distrito?</label> <input type="text" name="4_Tempo_Distrito" required>
+            <label>5. Horários disponíveis (úteis e finais de semana):</label> <textarea name="5_Horarios" required></textarea>
 
-            <div class="section-header">Histórico e Conduta</div>
-            <label>6. Experiência anterior?</label> <textarea name="Experiencia"></textarea>
-            <label>8. O que um superior NÃO pode fazer?</label> <textarea name="Regra_Ouro" required></textarea>
-            <label>10. Respeitado ou Temido?</label> <textarea name="Perfil" required></textarea>
-            <label>25. Cite três qualidades e três defeitos seus:</label> <textarea name="Psicologico" required></textarea>
+            <div class="section-header">Histórico e Experiência</div>
+            <label>6. Já foi superior/líder em alguma corporação? (Cargo/Servidor/Tempo):</label> <textarea name="6_Experiencia"></textarea>
+            <label>7. Por que saiu desse cargo? (sem mentir):</label> <textarea name="7_Motivo_Saida"></textarea>
 
-            <div class="section-header">Ciência</div>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 0.8em;">
-                <input type="checkbox" name="Aceite" required style="width: auto;"> Ciente do compromisso e semana de teste.
+            <div class="section-header">Conduta e Ética Militar</div>
+            <label>8. O que um superior NÃO pode fazer, mesmo tendo cargo?</label> <textarea name="8_Proibido" required></textarea>
+            <label>9. Como você age quando um membro erra uma regra?</label> <textarea name="9_Erro_Membro" required></textarea>
+            <label>10. Você prefere ser respeitado ou temido? Por quê?</label> <textarea name="10_Respeito_Temor" required></textarea>
+            <label>11. Se um superior da mesma patente quebra regra, o que você faz?</label> <textarea name="11_Superior_Infrator" required></textarea>
+            <label>12. Se um amigo entra na corporação, você facilita algo? Por quê?</label> <textarea name="12_Amizade" required></textarea>
+            <label>13. Por que quer ser superior nesta corporação e não em outra?</label> <textarea name="13_Por_Que_PMMG" required></textarea>
+            <label>14. Na sua opinião, por que você merece ser superior?</label> <textarea name="14_Merito" required></textarea>
+
+            <div class="section-header">Perfil de Liderança</div>
+            <label>17. Como lida com críticas (de superiores ou membros abaixo)?</label> <textarea name="17_Criticas" required></textarea>
+            <label>18. Membro desrespeitando jogadores repetidamente, o que faz?</label> <textarea name="18_Desrespeito" required></textarea>
+            <label>19. Como equilibra diversão e responsabilidade?</label> <textarea name="19_Equilibrio" required></textarea>
+            <label>20. Qual a principal função de um superior na corporação?</label> <textarea name="20_Funcao" required></textarea>
+            <label>21. Como agiria em um conflito entre dois membros?</label> <textarea name="21_Conflito" required></textarea>
+            <label>22. Se você cometer um erro, qual seria sua atitude?</label> <textarea name="22_Meu_Erro" required></textarea>
+            <label>23. O que faria se outro superior fosse abusivo com inferiores?</label> <textarea name="23_Abuso_Poder" required></textarea>
+            <label>24. O que faria se fosse necessário punir alguém próximo a você?</label> <textarea name="24_Punir_Amigo" required></textarea>
+            <label>25. Cite três qualidades e três defeitos seus:</label> <textarea name="25_Qualidades_Defeitos" required></textarea>
+
+            <div class="section-header">Termos Finais</div>
+            <p style="font-size: 0.85em;">15. Tem consciência do compromisso com a corporação?</p>
+            <p style="font-size: 0.85em;">16. Ciente que ficará 1 semana como teste (sujeito a rebaixamento)?</p>
+            <label style="display: flex; align-items: center; gap: 10px;">
+                <input type="checkbox" name="15_16_Ciencia" required style="width: auto; margin: 0;"> Aceito os termos.
             </label>
 
-            <button type="submit">Enviar Candidatura</button>
+            <button type="submit">Enviar Formulário ao Comando</button>
         </form>
 
-        <button class="btn-adm" onclick="entrarAdm()">ADM</button>
+        <button class="btn-adm" onclick="entrarAdm()">PAINEL ADM</button>
     </div>
 
     <div id="adm-panel">
-        <h1>Painel de Comando</h1>
-        <p>As respostas chegam direto no seu E-mail e no painel do Formspree.</p>
-        <a href="https://formspree.io/forms" target="_blank" style="color:var(--primary); font-weight: bold; text-decoration: none; border: 1px solid var(--primary); padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px;">VER RESPOSTAS NO FORMSPREE</a>
+        <h1>Painel de Comando PMMG</h1>
+        <p>As respostas estão salvas no painel do Formspree.</p>
+        <a href="https://formspree.io/forms" target="_blank" style="color:var(--primary); font-weight: bold; text-decoration: none; border: 1px solid var(--primary); padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px;">VER RESPOSTAS RECEBIDAS</a>
         <br><br>
-        <button onclick="window.location.reload()" style="width: auto; padding: 10px 20px;">Sair</button>
+        <button onclick="window.location.reload()" style="width: auto; padding: 10px 20px; background: #333; color: white;">Sair</button>
     </div>
 </div>
 
 <script>
     function entrarAdm() {
-        if (prompt("Digite a senha:") === "parede de senha") {
+        if (prompt("Digite a senha do Comando:") === "parede de senha") {
             document.getElementById('view-candidato').style.display = 'none';
             document.getElementById('adm-panel').style.display = 'block';
-        } else { alert("Senha Incorreta!"); }
+        } else { alert("Acesso Negado!"); }
     }
 </script>
 
